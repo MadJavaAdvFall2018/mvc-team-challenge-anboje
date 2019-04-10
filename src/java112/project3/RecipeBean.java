@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 public class RecipeBean extends Object {
 
+    private String recipeImg;
     private String  recipeName;
     private String duration;
     private int serving;
@@ -26,6 +27,24 @@ public class RecipeBean extends Object {
 	 */
 	public RecipeBean() {
 
+    }
+
+    /**
+     * Returns value of recipeImg
+     *
+     * @return recipe Img
+     */
+    public String getRecipeImg() {
+        return recipeImg;
+    }
+
+    /**
+     * Sets new value of recipeImg
+     *
+     * @param recipeImg the recipeImg
+     */
+    public void setRecipeImg(String recipeImg) {
+        this.recipeImg = recipeImg;
     }
 
 	/**

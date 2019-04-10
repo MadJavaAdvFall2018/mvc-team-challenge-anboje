@@ -53,6 +53,8 @@ public class RecipeServlet extends HttpServlet {
         beanOneIngredients.add(ingredient5);
 
         RecipeBean recipeOne = new RecipeBean();
+        recipeOne.setRecipeImg("images/spicyFish.jpg");
+
         recipeOne.setRecipeName("Spicy Fish");
         recipeOne.setDuration("25 min");
         recipeOne.setServing(6);
@@ -60,6 +62,7 @@ public class RecipeServlet extends HttpServlet {
 //        recipeOne.setIngredients(beanOneIngredients);
 
         RecipeBean recipeTwo = new RecipeBean();
+        recipeTwo.setRecipeImg("images/Igisafuliya.jpg");
         recipeTwo.setRecipeName("IGISAFULIYA");
         recipeTwo.setDuration("65 min");
         recipeTwo.setServing(5);
@@ -67,6 +70,7 @@ public class RecipeServlet extends HttpServlet {
 //        recipeTwo.setIngredients(beanTwoIngredients);
 
         RecipeBean recipeThree = new RecipeBean();
+        recipeThree.setRecipeImg("images/tagine.jpg");
         recipeThree.setRecipeName("Tagine");
         recipeThree.setDuration("40 min");
         recipeThree.setServing(4);

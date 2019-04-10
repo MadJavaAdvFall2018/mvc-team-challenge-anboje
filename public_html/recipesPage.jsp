@@ -13,54 +13,56 @@
                 <h1>Our recipes</h1>
         </div>
 
-        <main class="container">
-        
-            <div class="row">
-            
+        <main class="container" >
+
+            <div class="row" style="border:3px solid #008080; margin: 20px; padding: 20px;">
+
                 <%@page import="java.util.ArrayList" %>
-<%@page import="java112.project3.RecipeBean" %>
-        <h1>Our recipes</h1>
+                <%@page import="java112.project3.RecipeBean" %>
+                <h1 style="text-align:center" >Our Dishes</h1>
+
+                <%
+                int counter = 1;
+                ArrayList<RecipeBean> recipes = (ArrayList<RecipeBean>) request.getAttribute("recipesKey");
+
+                for(RecipeBean recipe: recipes) {
+                    %>
+                    <div class="col-md-4">
+                        <ul class="list-group">
+                            <h2 style="text-align:center">Dish <%=counter%></h2>
+                            <li class="list-group-item">
+                                <img src="<%=recipe.getRecipeImg() %>" style='width:100%;' alt="Click to view recipe">
+                            </li>
+                            <li class="list-group-item">
+
+                                <%=recipe.getRecipeName() %>
+                            </li>
+                            <li class="list-group-item">
+
+                                <%=recipe.getDuration() %>
+                            </li>
+                            <li class="list-group-item">
+
+                                <%=recipe.getServing() %>
+                            </li>
+                            <li class="list-group-item">
+
+                                <%=recipe.getOrigin() %>
+                            </li>
+
+                            <%
+                            counter += 1;
+                            %>
+                        </ul>
+                    </div>
+                    <%
+                }
+                %>
 
 
-
-    <%
-    int counter = 1;
-    ArrayList<RecipeBean> recipes = (ArrayList<RecipeBean>) request.getAttribute("recipesKey");
-
-    for(RecipeBean recipe: recipes) {
-        %>
-        <div class="col-md-4">
-        <ul class="list-group">
- <h2>Recipe <%=counter%></h2>
-    <li class="list-group-item">
-
-        <%=recipe.getRecipeName() %>
-        </li>
-        <li class="list-group-item">
-
-        <%=recipe.getDuration() %>
-        </li>
-        <li class="list-group-item">
-
-        <%=recipe.getServing() %>
-        </li>
-        <li class="list-group-item">
-
-        <%=recipe.getOrigin() %>
-        </li>
-
-    
-    <%
-    counter += 1;
-    %>
-</ul>
-</div>
-    <%
-    }
-    %>
-</ul>
-        
-            <a class="btn btn-primary" href="/java112">Home</a>
+            </div>
+            <div class="col-md-12 text-center">
+                <a class="btn btn-primary btn-lg btn-block" href="/java112">Home</a>
             </div>
         </main>
 
