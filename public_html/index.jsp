@@ -14,46 +14,19 @@
             <h1>Diagram of RecipePage JSP</h1>
         </div>
 
-        <div class="container">
-            <div class="main">
+        <main class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <h2> What did we do in RecipeServlet</h2>
-                        <p> </p>
+                    
+                        <br />
                     </div>
+                    
+                    <a class="btn btn-primary" href ="home">View Recipes </a>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2> What did we do in RecipeBean</h2>
-                        <p> </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2> What did we do in RecipePage JSP</h2>
-                        <p> </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2> Diagram of whole process</h2>
-
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="footer">
-                <div class="row">
-                    <div class="coi-md-12">
-                        <a href ="home">Recipes </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        
+            </main>
+    
     </body>
 </html>

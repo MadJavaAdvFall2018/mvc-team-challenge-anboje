@@ -1,32 +1,41 @@
 package java112.project3;
 
+import java.util.ArrayList;
+
+/**
+ * The type Recipe bean.
+ */
 public class RecipeBean extends Object {
 
     private String  recipeName;
     private String duration;
     private int serving;
+    private String source;
+    private ArrayList<Ingredient> ingredients = new ArrayList<Ingredient>();
     private String origin;
 
 
-    /**
-     *  Constructor for the RecipeBean object
-     */
-    public RecipeBean() {
+	/**
+	 * Constructor for the RecipeBean object
+	 */
+	public RecipeBean() {
 
     }
 
 	/**
-	* Returns value of recipeName
-	* @return
-	*/
+	 * Returns value of recipeName
+	 *
+	 * @return recipe name
+	 */
 	public String getRecipeName() {
 		return recipeName;
 	}
 
 	/**
-	* Sets new value of recipeName
-	* @param
-	*/
+	 * Sets new value of recipeName
+	 *
+	 * @param recipeName the recipe name
+	 */
 	public void setRecipeName(String recipeName) {
 		this.recipeName = recipeName;
 	}
@@ -48,17 +57,19 @@ public class RecipeBean extends Object {
 	}
 
 	/**
-	* Returns value of serving
-	* @return
-	*/
+	 * Returns value of serving
+	 *
+	 * @return serving
+	 */
 	public int getServing() {
 		return serving;
 	}
 
 	/**
-	* Sets new value of serving
-	* @param
-	*/
+	 * Sets new value of serving
+	 *
+	 * @param serving the serving
+	 */
 	public void setServing(int serving) {
 		this.serving = serving;
 	}

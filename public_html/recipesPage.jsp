@@ -13,50 +13,57 @@
                 <h1>Our recipes</h1>
         </div>
 
-        <div class="container">
-        <div class="main">
+        <main class="container">
+        
             <div class="row">
-            <div class="col-md-4">
-                <h2>First recipe</h2>
-                <ul>
-                    <li>${recipeOneKey.recipeName}</li>
-                    <li>${recipeOneKey.duration}</li>
-                    <li>${recipeOneKey.serving}</li>
-                    <li>${recipeOneKey.origin}</li>
-                </ul>
-            </div>
+            
+                <%@page import="java.util.ArrayList" %>
+<%@page import="java112.project3.RecipeBean" %>
+        <h1>Our recipes</h1>
 
+
+
+    <%
+    int counter = 1;
+    ArrayList<RecipeBean> recipes = (ArrayList<RecipeBean>) request.getAttribute("recipesKey");
+
+    for(RecipeBean recipe: recipes) {
+        %>
         <div class="col-md-4">
-            <h2>Second recipe</h2>
-            <ul>
-                <li>${recipeTwoKey.recipeName}</li>
-                <li>${recipeTwoKey.duration}</li>
-                <li>${recipeTwoKey.serving}</li>
-                <li>${recipeTwoKey.origin}</li>
-            </ul>
-        </div>
+        <ul class="list-group">
+ <h2>Recipe <%=counter%></h2>
+    <li class="list-group-item">
 
-        <div class="col-md-4">
-            <h2>Third recipe</h2>
-            <ul>
-                <li>${recipeThreeKey.recipeName}</li>
-                <li>${recipeThreeKey.duration}</li>
-                <li>${recipeThreeKey.serving}</li>
-                <li>${recipeThreeKey.origin}</li>
-            </ul>
-        </div>
-    </div>
-    </div>
+        <%=recipe.getRecipeName() %>
+        </li>
+        <li class="list-group-item">
 
-    <div class="footer">
-        <div class="row">
-            <div class="col-md-12">
-                <br />
-                <a href="/java112">Home</a>
+        <%=recipe.getDuration() %>
+        </li>
+        <li class="list-group-item">
+
+        <%=recipe.getServing() %>
+        </li>
+        <li class="list-group-item">
+
+        <%=recipe.getOrigin() %>
+        </li>
+
+    
+    <%
+    counter += 1;
+    %>
+</ul>
+</div>
+    <%
+    }
+    %>
+</ul>
+        
+            <a class="btn btn-primary" href="/java112">Home</a>
             </div>
-        </div>
-    </div>
+        </main>
 
-    </div>
+
     </body>
 </html>
