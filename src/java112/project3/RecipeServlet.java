@@ -30,20 +30,34 @@ public class RecipeServlet extends HttpServlet {
 
 
         RecipeBean recipeOne = new RecipeBean();
-
-        // recipeOne.setRecipeName("Dish Name : " + name);
-        // recipeOne.setAuthor("Author Name : " + name);
-        // recipeOne.setServing("Serving Name : " + name);
-        // recipeOne.setSource("Source Name : " + name);
         recipeOne.setRecipeName("Spicy Fish");
-        recipeOne.setAuthor("AnBoJe");
+        recipeOne.setDuration("25 min");
         recipeOne.setServing(6);
-        recipeOne.setSource("ocean");
+        recipeOne.setOrigin("China");
 
-        request.setAttribute("recipeKey", recipeOne);
+        RecipeBean recipeTwo = new RecipeBean();
+        recipeTwo.setRecipeName("IGISAFULIYA");
+        recipeTwo.setDuration("65 min");
+        recipeTwo.setServing(5);
+        recipeTwo.setOrigin("Rwanda");
+
+        RecipeBean recipeThree = new RecipeBean();
+        recipeThree.setRecipeName("Tagine");
+        recipeThree.setDuration("40 min");
+        recipeThree.setServing(4);
+        recipeThree.setOrigin("Morocco");
+
+
+
+
+
+        request.setAttribute("recipeOneKey", recipeOne);
+        request.setAttribute("recipeTwoKey", recipeTwo);
+        request.setAttribute("recipeThreeKey", recipeThree);
+
         // request.setAttribute("authorKey", recipeOne);
         // request.setAttribute("servingKey", recipeOne);
-        // request.setAttribute("sourceKey", recipeOne);
+        // request.setAttribute("OriginKey", recipeOne);
 
 
         String url = "/recipesPage.jsp";

@@ -3,9 +3,9 @@ package java112.project3;
 public class RecipeBean extends Object {
 
     private String  recipeName;
-    private String author;
+    private String duration;
     private int serving;
-    private String source;
+    private String origin;
 
 
     /**
@@ -13,7 +13,6 @@ public class RecipeBean extends Object {
      */
     public RecipeBean() {
 
-        recipeName = "spicy fish";
     }
 
 	/**
@@ -33,19 +32,19 @@ public class RecipeBean extends Object {
 	}
 
 	/**
-	* Returns value of author
+	* Returns value of duration
 	* @return
 	*/
-	public String getAuthor() {
-		return author;
+	public String getDuration() {
+		return duration;
 	}
 
 	/**
-	* Sets new value of author
+	* Sets new value of duration
 	* @param
 	*/
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setDuration(String duration) {
+		this.duration = duration;
 	}
 
 	/**
@@ -65,19 +64,19 @@ public class RecipeBean extends Object {
 	}
 
 	/**
-	* Returns value of source
+	* Returns value of origin
 	* @return
 	*/
-	public String getSource() {
-		return source;
+	public String getOrigin() {
+		return origin;
 	}
 
 	/**
-	* Sets new value of source
+	* Sets new value of origin
 	* @param
 	*/
-	public void setSource(String source) {
-		this.source = source;
+	public void setOrigin(String origin) {
+		this.origin = origin;
 	}
 
 }
