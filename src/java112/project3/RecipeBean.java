@@ -10,10 +10,16 @@ public class RecipeBean extends Object {
     private String  recipeName;
     private String duration;
     private int serving;
-    private String source;
-    private ArrayList<Ingredient> ingredients = new ArrayList<Ingredient>();
+    private ArrayList<Ingredient> ingredients;
     private String origin;
 
+	public ArrayList<Ingredient> getIngredients() {
+		return ingredients;
+	}
+
+	public void setIngredients(ArrayList<Ingredient> ingredients) {
+		this.ingredients = ingredients;
+	}
 
 	/**
 	 * Constructor for the RecipeBean object

@@ -9,38 +9,14 @@ public class Ingredient {
     private double amount;
 
     /**
-     * Gets ingredient name.
-     *
-     * @return the ingredient name
-     */
-    public String getIngredientName() {
-        return ingredientName;
-    }
-
-    /**
-     * Sets ingredient name.
+     * Instantiates a new Ingredient.
      *
      * @param ingredientName the ingredient name
+     * @param amount         the amount
      */
-    public void setIngredientName(String ingredientName) {
+    public Ingredient(String ingredientName, double amount) {
         this.ingredientName = ingredientName;
-    }
-
-    /**
-     * Gets amount.
-     *
-     * @return the amount
-     */
-    public double getAmount() {
-        return amount;
-    }
-
-    /**
-     * Sets amount.
-     *
-     * @param amount the amount
-     */
-    public void setAmount(double amount) {
         this.amount = amount;
     }
+
 }

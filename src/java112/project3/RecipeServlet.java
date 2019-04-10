@@ -31,17 +31,40 @@ public class RecipeServlet extends HttpServlet {
         String name = request.getParameter("recipeName");
         ArrayList<RecipeBean> recipes = new ArrayList<>();
 
+        ArrayList<Ingredient> beanOneIngredients = new ArrayList<>();
+        Ingredient ingredient1 = new Ingredient("Telapia" , 2);
+        Ingredient ingredient2 = new Ingredient("Green Pepper" , 1);
+        Ingredient ingredient3 = new Ingredient("Black Pepper" , 1);
+        Ingredient ingredient4 = new Ingredient("Cabbage" , 0.5);
+        Ingredient ingredient5 = new Ingredient("salt" , 0.25);
+
+
+        ArrayList<Ingredient> beanTwoIngredients = new ArrayList<>();
+        Ingredient ingredientOne = new Ingredient("Banaba" , 5);
+        Ingredient ingredientTwo = new Ingredient("chicken" , 4);
+        Ingredient ingredientThree = new Ingredient("Onions" , 1);
+        Ingredient ingredientFour = new Ingredient("spinach" , 3);
+        Ingredient ingredientFive = new Ingredient("salt" , 0.25);
+
+        beanOneIngredients.add(ingredient1);
+        beanOneIngredients.add(ingredient2);
+        beanOneIngredients.add(ingredient3);
+        beanOneIngredients.add(ingredient4);
+        beanOneIngredients.add(ingredient5);
+
         RecipeBean recipeOne = new RecipeBean();
         recipeOne.setRecipeName("Spicy Fish");
         recipeOne.setDuration("25 min");
         recipeOne.setServing(6);
         recipeOne.setOrigin("China");
+//        recipeOne.setIngredients(beanOneIngredients);
 
         RecipeBean recipeTwo = new RecipeBean();
         recipeTwo.setRecipeName("IGISAFULIYA");
         recipeTwo.setDuration("65 min");
         recipeTwo.setServing(5);
         recipeTwo.setOrigin("Rwanda");
+//        recipeTwo.setIngredients(beanTwoIngredients);
 
         RecipeBean recipeThree = new RecipeBean();
         recipeThree.setRecipeName("Tagine");
@@ -53,12 +76,11 @@ public class RecipeServlet extends HttpServlet {
          recipes.add(recipeThree);
 
         request.setAttribute("recipesKey", recipes);
-
-
-
 //        request.setAttribute("recipeOneKey", recipeOne);
 //        request.setAttribute("recipeTwoKey", recipeTwo);
 //        request.setAttribute("recipeThreeKey", recipeThree);
+
+
 
 
         String url = "/recipesPage.jsp";
