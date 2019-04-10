@@ -5,20 +5,42 @@
         <title>Recipes</title>
     </head>
     <body>
-        <h3>Our recipes</h3>
 
-        <ul>
-        <c:forEach var="recipe" items="${recipeKey}">
+<%@page import="java.util.ArrayList" %>
+<%@page import="java112.project3.RecipeBean" %>
+        <h1>Our recipes</h1>
 
-            <li>${recipe.recipeName}</li>
+<ul>
+    <%
+    int counter = 1;
+    ArrayList<RecipeBean> recipes = (ArrayList<RecipeBean>) request.getAttribute("recipesKey");
 
-            <li>${recipe.author}</li>
-            <li>${recipe.serving}</li>
-        </c:forEach>
+    for(RecipeBean recipe: recipes) {
+    %> <h2>Recipe <%=counter%></h2>
+    <li>
 
-        </ul>
+        <%=recipe.getRecipeName() %>
+        </li>
+        <li>
 
-        <br />
+        <%=recipe.getDuration() %>
+        </li>
+        <li>
+
+        <%=recipe.getServing() %>
+        </li>
+        <li>
+
+        <%=recipe.getOrigin() %>
+        </li>
+
+
+    <%
+    counter += 1;
+    }
+    %>
+</ul>
+
 
         <a href="/java112">Home</a>
 

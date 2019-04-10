@@ -8,10 +8,11 @@ import java.util.ArrayList;
 public class RecipeBean extends Object {
 
     private String  recipeName;
-    private String author;
+    private String duration;
     private int serving;
     private String source;
-    private ArrayList<Ingredient> ingredients = new Ingredient();
+    private ArrayList<Ingredient> ingredients = new ArrayList<Ingredient>();
+    private String origin;
 
 
 	/**
@@ -19,7 +20,6 @@ public class RecipeBean extends Object {
 	 */
 	public RecipeBean() {
 
-        recipeName = "spicy fish";
     }
 
 	/**
@@ -41,21 +41,19 @@ public class RecipeBean extends Object {
 	}
 
 	/**
-	 * Returns value of author
-	 *
-	 * @return author
-	 */
-	public String getAuthor() {
-		return author;
+	* Returns value of duration
+	* @return
+	*/
+	public String getDuration() {
+		return duration;
 	}
 
 	/**
-	 * Sets new value of author
-	 *
-	 * @param author the author
-	 */
-	public void setAuthor(String author) {
-		this.author = author;
+	* Sets new value of duration
+	* @param
+	*/
+	public void setDuration(String duration) {
+		this.duration = duration;
 	}
 
 	/**
@@ -77,21 +75,19 @@ public class RecipeBean extends Object {
 	}
 
 	/**
-	 * Returns value of source
-	 *
-	 * @return source
-	 */
-	public String getSource() {
-		return source;
+	* Returns value of origin
+	* @return
+	*/
+	public String getOrigin() {
+		return origin;
 	}
 
 	/**
-	 * Sets new value of source
-	 *
-	 * @param source the source
-	 */
-	public void setSource(String source) {
-		this.source = source;
+	* Sets new value of origin
+	* @param
+	*/
+	public void setOrigin(String origin) {
+		this.origin = origin;
 	}
 
 }
