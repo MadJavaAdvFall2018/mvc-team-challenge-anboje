@@ -28,7 +28,6 @@ public class RecipeServlet extends HttpServlet {
 
         String name = request.getParameter("recipeName");
 
-
         RecipeBean recipeOne = new RecipeBean();
         recipeOne.setRecipeName("Spicy Fish");
         recipeOne.setDuration("25 min");
@@ -47,18 +46,9 @@ public class RecipeServlet extends HttpServlet {
         recipeThree.setServing(4);
         recipeThree.setOrigin("Morocco");
 
-
-
-
-
         request.setAttribute("recipeOneKey", recipeOne);
         request.setAttribute("recipeTwoKey", recipeTwo);
         request.setAttribute("recipeThreeKey", recipeThree);
-
-        // request.setAttribute("authorKey", recipeOne);
-        // request.setAttribute("servingKey", recipeOne);
-        // request.setAttribute("OriginKey", recipeOne);
-
 
         String url = "/recipesPage.jsp";
 
