@@ -1,6 +1,7 @@
 package java112.project3;
 
 import java.io.*;
+import java.util.ArrayList;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -27,6 +28,7 @@ public class RecipeServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String name = request.getParameter("recipeName");
+        ArrayList<RecipeBean> recipes = new ArrayList<>();
 
 
         RecipeBean recipeOne = new RecipeBean();
@@ -39,8 +41,37 @@ public class RecipeServlet extends HttpServlet {
         recipeOne.setAuthor("AnBoJe");
         recipeOne.setServing(6);
         recipeOne.setSource("ocean");
+        RecipeBean recipeTwo = new RecipeBean();
+        recipeTwo.setRecipeName("Corn casserole");
+        recipeTwo.setAuthor("AnBoJe");
+        recipeTwo.setServing(3);
+        recipeTwo.setSource("Market");
+        RecipeBean recipeThree = new RecipeBean();
+        recipeThree.setRecipeName("Couscous");
+        recipeThree.setAuthor("AnBoJe");
+        recipeThree.setServing(2);
+        recipeThree.setSource("Market");
+        RecipeBean recipeFour = new RecipeBean();
+        recipeFour.setRecipeName("Grilled Chicken");
+        recipeFour.setAuthor("AnBoJe");
+        recipeFour.setServing(3);
+        recipeFour.setSource("ocean");
+        RecipeBean recipeFive = new RecipeBean();
+        recipeFive.setRecipeName("Smoked Beans");
+        recipeFive.setAuthor("AnBoJe");
+        recipeFive.setServing(9);
+        recipeFive.setSource("Market");
 
-        request.setAttribute("recipeKey", recipeOne);
+        recipes.add(recipeOne);
+        recipes.add(recipeTwo);
+        recipes.add(recipeThree);
+        recipes.add(recipeFour);
+        recipes.add(recipeFive);
+
+            request.setAttribute("recipeKey", recipes);
+
+
+
         // request.setAttribute("authorKey", recipeOne);
         // request.setAttribute("servingKey", recipeOne);
         // request.setAttribute("sourceKey", recipeOne);
