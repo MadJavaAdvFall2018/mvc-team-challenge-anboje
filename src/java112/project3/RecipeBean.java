@@ -41,17 +41,19 @@ public class RecipeBean extends Object {
 	}
 
 	/**
-	* Returns value of duration
-	* @return
-	*/
+	 * Returns value of duration
+	 *
+	 * @return duration
+	 */
 	public String getDuration() {
 		return duration;
 	}
 
 	/**
-	* Sets new value of duration
-	* @param
-	*/
+	 * Sets new value of duration
+	 *
+	 * @param duration the duration
+	 */
 	public void setDuration(String duration) {
 		this.duration = duration;
 	}
@@ -59,7 +61,7 @@ public class RecipeBean extends Object {
 	/**
 	 * Returns value of serving
 	 *
-	 * @return serving
+	 * @return serving serving
 	 */
 	public int getServing() {
 		return serving;
@@ -75,17 +77,19 @@ public class RecipeBean extends Object {
 	}
 
 	/**
-	* Returns value of origin
-	* @return
-	*/
+	 * Returns value of origin
+	 *
+	 * @return origin
+	 */
 	public String getOrigin() {
 		return origin;
 	}
 
 	/**
-	* Sets new value of origin
-	* @param
-	*/
+	 * Sets new value of origin
+	 *
+	 * @param origin the origin
+	 */
 	public void setOrigin(String origin) {
 		this.origin = origin;
 	}
