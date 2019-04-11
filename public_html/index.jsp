@@ -18,7 +18,7 @@
                 <div class="row" style="border:3px solid #008080; margin: 20px; padding: 20px;">
                     <div class="col-md-12 text-center">
                         <h2> What did we do in RecipeServlet</h2>
-                        <img src="images/teamMVC.png" style='width:100%;' alt="Team MCV architecture"/>
+                        <img href = "home" src="images/teamMVC.png" style='width:100%;' alt="Team MCV architecture"/>
                         <br />
                     </div>
                 </div>

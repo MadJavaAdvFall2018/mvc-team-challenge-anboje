@@ -31,35 +31,34 @@ public class RecipeServlet extends HttpServlet {
         String name = request.getParameter("recipeName");
         ArrayList<RecipeBean> recipes = new ArrayList<>();
 
-        ArrayList<Ingredient> beanOneIngredients = new ArrayList<>();
-        Ingredient ingredient1 = new Ingredient("Telapia" , 2);
-        Ingredient ingredient2 = new Ingredient("Green Pepper" , 1);
-        Ingredient ingredient3 = new Ingredient("Black Pepper" , 1);
-        Ingredient ingredient4 = new Ingredient("Cabbage" , 0.5);
-        Ingredient ingredient5 = new Ingredient("salt" , 0.25);
-
-
-        ArrayList<Ingredient> beanTwoIngredients = new ArrayList<>();
-        Ingredient ingredientOne = new Ingredient("Banaba" , 5);
-        Ingredient ingredientTwo = new Ingredient("chicken" , 4);
-        Ingredient ingredientThree = new Ingredient("Onions" , 1);
-        Ingredient ingredientFour = new Ingredient("spinach" , 3);
-        Ingredient ingredientFive = new Ingredient("salt" , 0.25);
-
-        beanOneIngredients.add(ingredient1);
-        beanOneIngredients.add(ingredient2);
-        beanOneIngredients.add(ingredient3);
-        beanOneIngredients.add(ingredient4);
-        beanOneIngredients.add(ingredient5);
+        // ArrayList<Ingredient> beanOneIngredients = new ArrayList<>();
+        // Ingredient ingredient1 = new Ingredient("Telapia" , 2);
+        // Ingredient ingredient2 = new Ingredient("Green Pepper" , 1);
+        // Ingredient ingredient3 = new Ingredient("Black Pepper" , 1);
+        // Ingredient ingredient4 = new Ingredient("Cabbage" , 0.5);
+        // Ingredient ingredient5 = new Ingredient("salt" , 0.25);
+        //
+        //
+        // ArrayList<Ingredient> beanTwoIngredients = new ArrayList<>();
+        // Ingredient ingredientOne = new Ingredient("Banaba" , 5);
+        // Ingredient ingredientTwo = new Ingredient("chicken" , 4);
+        // Ingredient ingredientThree = new Ingredient("Onions" , 1);
+        // Ingredient ingredientFour = new Ingredient("spinach" , 3);
+        // Ingredient ingredientFive = new Ingredient("salt" , 0.25);
+        //
+        // beanOneIngredients.add(ingredient1);
+        // beanOneIngredients.add(ingredient2);
+        // beanOneIngredients.add(ingredient3);
+        // beanOneIngredients.add(ingredient4);
+        // beanOneIngredients.add(ingredient5);
 
         RecipeBean recipeOne = new RecipeBean();
         recipeOne.setRecipeImg("images/spicyFish.jpg");
-
         recipeOne.setRecipeName("Spicy Fish");
         recipeOne.setDuration("25 min");
         recipeOne.setServing(6);
         recipeOne.setOrigin("China");
-//        recipeOne.setIngredients(beanOneIngredients);
+        recipeOne.setIngredientsPath("/java112");
 
         RecipeBean recipeTwo = new RecipeBean();
         recipeTwo.setRecipeImg("images/Igisafuliya.jpg");
@@ -67,7 +66,8 @@ public class RecipeServlet extends HttpServlet {
         recipeTwo.setDuration("65 min");
         recipeTwo.setServing(5);
         recipeTwo.setOrigin("Rwanda");
-//        recipeTwo.setIngredients(beanTwoIngredients);
+        recipeTwo.setIngredientsPath("/java112");
+
 
         RecipeBean recipeThree = new RecipeBean();
         recipeThree.setRecipeImg("images/tagine.jpg");
@@ -75,22 +75,22 @@ public class RecipeServlet extends HttpServlet {
         recipeThree.setDuration("40 min");
         recipeThree.setServing(4);
         recipeThree.setOrigin("Morocco");
+        recipeThree.setIngredientsPath("/java112");
+
+
          recipes.add(recipeOne);
          recipes.add(recipeTwo);
          recipes.add(recipeThree);
 
         request.setAttribute("recipesKey", recipes);
-//        request.setAttribute("recipeOneKey", recipeOne);
-//        request.setAttribute("recipeTwoKey", recipeTwo);
-//        request.setAttribute("recipeThreeKey", recipeThree);
 
 
 
 
-        String url = "/recipesPage.jsp";
+
 
         RequestDispatcher dispatcher
-                = getServletContext().getRequestDispatcher(url);
+                = getServletContext().getRequestDispatcher("/recipesPage.jsp");
         dispatcher.forward(request, response);
 
     }

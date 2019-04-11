@@ -19,7 +19,7 @@
 
                 <%@page import="java.util.ArrayList" %>
                 <%@page import="java112.project3.RecipeBean" %>
-                <h1 style="text-align:center" >Our Dishes</h1>
+                <h1 style="text-align:center" >Trending Dishes</h1>
 
                 <%
                 int counter = 1;
@@ -50,6 +50,9 @@
                                 <%=recipe.getOrigin() %>
                             </li>
 
+                            <li class="list-group-item">
+                                <a href="<%=recipe.getIngredientsPath() %>"> Click here to view recipes </a>
+                            </li>
                             <%
                             counter += 1;
                             %>
