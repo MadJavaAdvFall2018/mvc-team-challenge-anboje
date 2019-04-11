@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                    <a class="btn btn-primary btn-lg btn-block " href ="home">View Recipes </a>
+                    <a class="btn btn-primary btn-lg btn-block " href ="recipePage">View Recipes </a>
                 </div>
 
             </main>

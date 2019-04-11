@@ -13,7 +13,7 @@ import javax.servlet.annotation.*;
  */
 @WebServlet(
     name = "recipe",
-    urlPatterns = { "/home" }
+    urlPatterns = { "/recipePage" }
 )
 public class RecipeServlet extends HttpServlet {
 
@@ -31,51 +31,57 @@ public class RecipeServlet extends HttpServlet {
         String name = request.getParameter("recipeName");
         ArrayList<RecipeBean> recipes = new ArrayList<>();
 
-        // ArrayList<Ingredient> beanOneIngredients = new ArrayList<>();
-        // Ingredient ingredient1 = new Ingredient("Telapia" , 2);
-        // Ingredient ingredient2 = new Ingredient("Green Pepper" , 1);
-        // Ingredient ingredient3 = new Ingredient("Black Pepper" , 1);
-        // Ingredient ingredient4 = new Ingredient("Cabbage" , 0.5);
-        // Ingredient ingredient5 = new Ingredient("salt" , 0.25);
-        //
-        //
-        // ArrayList<Ingredient> beanTwoIngredients = new ArrayList<>();
-        // Ingredient ingredientOne = new Ingredient("Banaba" , 5);
-        // Ingredient ingredientTwo = new Ingredient("chicken" , 4);
-        // Ingredient ingredientThree = new Ingredient("Onions" , 1);
-        // Ingredient ingredientFour = new Ingredient("spinach" , 3);
-        // Ingredient ingredientFive = new Ingredient("salt" , 0.25);
-        //
-        // beanOneIngredients.add(ingredient1);
-        // beanOneIngredients.add(ingredient2);
-        // beanOneIngredients.add(ingredient3);
-        // beanOneIngredients.add(ingredient4);
-        // beanOneIngredients.add(ingredient5);
 
         RecipeBean recipeOne = new RecipeBean();
         recipeOne.setRecipeImg("images/spicyFish.jpg");
         recipeOne.setRecipeName("Spicy Fish");
-        recipeOne.setDuration("25 min");
+        recipeOne.setDuration("45 min");
         recipeOne.setServing(6);
         recipeOne.setOrigin("China");
-        recipeOne.setIngredientsPath("/java112");
+        recipeOne.setIngredients("<a> 2 whole sea bass (400 grams / 14 ounces each)</a> <br>"
+        +"<a> 1 teaspoon chili pepper flakes (or powder)</a><br>"
+        +"<a> 1 teaspoon cumin powder</a><br>"
+        +"<a> 1 thumb ginger, half sliced, half minced</a><br>"
+        +"<a>1 medium size onion, sliced</a><br>"
+        +"<a>1 teaspoon salt</a><br>"
+        +"<a> 1 cup lotus root, sliced</a><br>"
+        +"<a> 1 cup bamboo shoot, sliced</a><br>"
+        +"<a> 10 - 20 dried chili pepper</a>");
+
 
         RecipeBean recipeTwo = new RecipeBean();
         recipeTwo.setRecipeImg("images/Igisafuliya.jpg");
         recipeTwo.setRecipeName("IGISAFULIYA");
         recipeTwo.setDuration("65 min");
-        recipeTwo.setServing(5);
+        recipeTwo.setServing(4);
         recipeTwo.setOrigin("Rwanda");
-        recipeTwo.setIngredientsPath("/java112");
+        recipeTwo.setIngredients("<a> 4 chicken thighs</a> <br>"
+        +"<a> 2 onions , chopped</a><br>"
+        +"<a> 2 leeks (white and green parts), thinly sliced</a><br>"
+        +"<a> 4 green bell peppers , seeded and cut</a><br>"
+        +"<a>4 tomatoes , peeled, seeded, and diced</a><br>"
+        +"<a>5 celery stalks , chopped (including leaves)</a><br>"
+        +"<a> 4 plantain bananas , peeled, cut in half lengthwise and then cut in half</a><br>"
+        +"<a> 10 oz. spinach , fresh or frozen</a><br>"
+        +"<a> 4 tablespoons sunflower oil</a>");
 
 
         RecipeBean recipeThree = new RecipeBean();
         recipeThree.setRecipeImg("images/tagine.jpg");
         recipeThree.setRecipeName("Tagine");
-        recipeThree.setDuration("40 min");
-        recipeThree.setServing(4);
+        recipeThree.setDuration("50 min");
+        recipeThree.setServing(7);
         recipeThree.setOrigin("Morocco");
-        recipeThree.setIngredientsPath("/java112");
+        recipeThree.setIngredients("<a> 3 lbs chicken whole roaster cut into pieces</a> <br>"
+        +"<a> 1/2 cup onion chopped</a> <br>"
+        +"<a> 1 cup water</a><br>"
+        +"<a> 2 garlic cloves minced</a><br>"
+        +"<a> 2 Roma tomato cored and diced</a><br>"
+        +"<a>1/4 cup peas frozen</a><br>"
+        +"<a>3 carrots sliced</a><br>"
+        +"<a> 2 Tbsp olive oil</a><br>"
+        +"<a> 1 lb potatoes (paleo diet: sweet potatoes)</a><br>"
+        +"<a> 1 Tbsp fresh parsley chopped</a>");
 
 
          recipes.add(recipeOne);
@@ -83,9 +89,6 @@ public class RecipeServlet extends HttpServlet {
          recipes.add(recipeThree);
 
         request.setAttribute("recipesKey", recipes);
-
-
-
 
 
 

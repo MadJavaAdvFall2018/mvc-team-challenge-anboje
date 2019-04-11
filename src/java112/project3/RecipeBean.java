@@ -11,9 +11,8 @@ public class RecipeBean extends Object {
     private String  recipeName;
     private String duration;
     private int serving;
-    private ArrayList<Ingredient> ingredients;
+    private String ingredients;
     private String origin;
-    private String ingredientsPath;
 
 	// public ArrayList<Ingredient> getIngredients() {
 	// 	return ingredients;
@@ -100,7 +99,7 @@ public class RecipeBean extends Object {
 	* Returns value of ingredients
 	* @return
 	*/
-	public ArrayList<Ingredient> getIngredients() {
+	public String getIngredients() {
 		return ingredients;
 	}
 
@@ -108,7 +107,7 @@ public class RecipeBean extends Object {
 	* Sets new value of ingredients
 	* @param
 	*/
-	public void setIngredients(ArrayList<Ingredient> ingredients) {
+	public void setIngredients(String ingredients) {
 		this.ingredients = ingredients;
 	}
 
@@ -128,19 +127,5 @@ public class RecipeBean extends Object {
 		this.origin = origin;
 	}
 
-	/**
-	* Returns value of ingredientsPath
-	* @return
-	*/
-	public String getIngredientsPath() {
-		return ingredientsPath;
-	}
-
-	/**
-	* Sets new value of ingredientsPath
-	* @param
-	*/
-	public void setIngredientsPath(String ingredientsPath) {
-		this.ingredientsPath = ingredientsPath;
-	}
+	
 }

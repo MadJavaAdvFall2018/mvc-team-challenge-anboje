@@ -11,22 +11,30 @@
     </head>
     <body>
         <div class="jumbotron text-center">
-                <h1>Our recipes</h1>
+                <h1>Full Instructions</h1>
         </div>
 
         <main class="container">
+            <div class="row" style="border:3px solid #008080; margin: 20px; padding: 20px;">
 
-            <div class="row">
-            <ul>
-            <li>
-                ${recipeOneKey.getIngredients.get(0)}
-            </li>
-            </ul>
+                <div class="col-md-4 text-center">
+                    <a class="btn btn-info btn-lg btn-block" href="https://omnivorescookbook.com/recipes/chinese-spicy-roast-fish">Spicy Fish</a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a class="btn btn-info btn-lg btn-block" href="https://www.196flavors.com/rwanda-igisafuliya/">IGISAFULIYA</a>
+                </div>
 
-
-
-            <a class="btn btn-primary" href="/java112">Home</a>
+                <div class="col-md-4 text-center">
+                    <a class="btn btn-info btn-lg btn-block" href="https://ethnicspoon.com/moroccan-chicken-tagine/#wprm-recipe-container-6977">Tagine</a>
+                </div>
             </div>
+            <div class="col-md-6 text-center">
+                <a class="btn btn-primary btn-lg btn-block" href="/java112">Home</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <a class="btn btn-primary btn-lg btn-block" href ="recipePage"">back</a>
+            </div>
+
         </main>
 
 

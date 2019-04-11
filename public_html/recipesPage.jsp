@@ -51,8 +51,10 @@
                             </li>
 
                             <li class="list-group-item">
-                                <a href="<%=recipe.getIngredientsPath() %>"> Click here to view recipes </a>
+                                <%=recipe.getIngredients() %>
                             </li>
+
+
                             <%
                             counter += 1;
                             %>
@@ -64,11 +66,13 @@
 
 
             </div>
-            <div class="col-md-12 text-center">
+            <div class="col-md-6 text-center">
                 <a class="btn btn-primary btn-lg btn-block" href="/java112">Home</a>
             </div>
+            <div class="col-md-6 text-center">
+                <a class="btn btn-primary btn-lg btn-block" href="ingredientPages.jsp">Instructions</a>
+            </div>
         </main>
-
 
     </body>
 </html>
